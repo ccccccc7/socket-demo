@@ -27,5 +27,15 @@ public class TCPClient {
         OutputStream out = socket.getOutputStream();
 
         out.write(data);
+
+        int totalRcvd = 0;
+        int byteRcvd;
+
+        while ((byteRcvd = in.read(rcvdBuf, totalRcvd, BUFSIZE - 1 - totalRcvd)) != -1) {
+            totalRcvd += byteRcvd;
+        }
+
+        System.out.println(new String(rcvdBuf));
+        socket.close();
     }
 }
