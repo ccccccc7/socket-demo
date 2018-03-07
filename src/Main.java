@@ -1,6 +1,14 @@
+import util.JdbcUtil;
+
+import java.sql.SQLException;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        try {
+            JdbcUtil.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
