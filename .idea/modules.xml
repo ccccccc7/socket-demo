@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/rooter-core/rooter-core.iml" filepath="$PROJECT_DIR$/rooter-core/rooter-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket-demo.iml" filepath="$PROJECT_DIR$/socket-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket-test/socket-test.iml" filepath="$PROJECT_DIR$/socket-test/socket-test.iml" />
     </modules>
   </component>
 </project>

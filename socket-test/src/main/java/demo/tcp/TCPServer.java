@@ -1,4 +1,4 @@
-package tcp;
+package demo.tcp;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,15 +13,18 @@ import java.net.SocketAddress;
  * @author zyl
  */
 public class TCPServer {
-    private static final int BUFSIZE = 32;
-    private static final int SERVERPOER = 8040;
+    private static final int BUFSIZE = 2014;
+    private static final int SERVERPOER = 55535;
 
     public static void main(String[] args) throws IOException {
         //create server socket
         ServerSocket serverSocket = new ServerSocket(SERVERPOER);
 
+        System.out.println("server ready");
+
         int recvMsgSize;
         byte[] receiveBuf = new byte[BUFSIZE];
+        String response = "receive success";
 
         //accepting and receiving connection
         while (true) {
@@ -34,10 +37,15 @@ public class TCPServer {
             InputStream in = clientSocket.getInputStream();
             //get outputStream
             OutputStream out = clientSocket.getOutputStream();
-
+            StringBuilder sb = new StringBuilder();
             while ((recvMsgSize = in.read(receiveBuf)) != -1) {
-                out.write(receiveBuf, 0, recvMsgSize);
+                sb.append(new String(receiveBuf, 0, recvMsgSize, "UTF-8"));
+                out.write(response.getBytes());
             }
+            System.out.println("get message from client: " + response);
+
+            in.close();
+            out.close();
             clientSocket.close();
         }
     }
