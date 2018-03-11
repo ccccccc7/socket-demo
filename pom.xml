@@ -11,6 +11,8 @@
     <modules>
         <module>rooter-core</module>
         <module>socket-test</module>
+        <module>servercore</module>
+        <module>server-core</module>
     </modules>
 
 
