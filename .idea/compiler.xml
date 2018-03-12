@@ -16,8 +16,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="server-core" />
         <module name="socket-test" />
+        <module name="t1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -25,6 +25,7 @@
       <module name="server-core" target="1.5" />
       <module name="socket-demo" target="1.5" />
       <module name="socket-test" target="1.5" />
+      <module name="t1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

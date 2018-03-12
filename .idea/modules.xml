@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/server-core/server-core.iml" filepath="$PROJECT_DIR$/server-core/server-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket-demo.iml" filepath="$PROJECT_DIR$/socket-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/socket-test/socket-test.iml" filepath="$PROJECT_DIR$/socket-test/socket-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t1/t1.iml" filepath="$PROJECT_DIR$/t1/t1.iml" />
     </modules>
   </component>
 </project>
